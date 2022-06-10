@@ -5,7 +5,7 @@ import javax.servlet.ServletException;
 import javax.servlet.ServletRegistration;
 
 import org.springframework.web.WebApplicationInitializer;
-import org.springframework.web.context.support.XmlWebApplicationContext;
+import org.springframework.web.context.support.AnnotationConfigWebApplicationContext;
 import org.springframework.web.servlet.DispatcherServlet;
 
 //JAVA based configuration for replacement for web.xml
@@ -19,9 +19,8 @@ public class LoveCalAppIntializer implements WebApplicationInitializer {
 	@Override
 	public void onStartup(ServletContext servletContext) throws ServletException {
 		
-		//in spring config file we declare beans etc i.e app-config.xml
-		XmlWebApplicationContext appContext = new XmlWebApplicationContext();
-		appContext.setConfigLocation("classpath:application-config.xml");
+		AnnotationConfigWebApplicationContext appContext = new AnnotationConfigWebApplicationContext();
+		appContext.register(LoveCalAppConfig.class);
 
 		// create a Dispatcher servlet
 		DispatcherServlet ds = new DispatcherServlet(appContext);
