@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1 align="center">Love Calculator</h1>
-	<p>Your name :${yourname}</p>
-	<p>Crush name:${crushname}</p>
+	<p>Your name :${userinfo.yourname}</p>
+	<p>Crush name:${userinfo.crushname}</p>
 </body>
 </html>
