@@ -14,24 +14,24 @@ import org.springframework.web.servlet.DispatcherServlet;
 //The implementation for ServletContext obj will be provided by Servlet 
 //container i.e our server Tomcat
 
-public class LoveCalAppIntializer implements WebApplicationInitializer {
-
-	@Override
-	public void onStartup(ServletContext servletContext) throws ServletException {
-		
-		AnnotationConfigWebApplicationContext appContext = new AnnotationConfigWebApplicationContext();
-		appContext.register(LoveCalAppConfig.class);
-
-		// create a Dispatcher servlet
-		DispatcherServlet ds = new DispatcherServlet(appContext);
-
-		// register our dispatcher servlet with ServletContext obj
-		// we have registered our dispatcher servlet with servletContext
-		ServletRegistration.Dynamic mydispatcher = servletContext.addServlet("dispatcherServlet", ds);
-
-		mydispatcher.setLoadOnStartup(1);
-		mydispatcher.addMapping("/*");
-
-	}
+public class LoveCalAppIntializer //implements WebApplicationInitializer {
+{
+//	@Override
+//	public void onStartup(ServletContext servletContext) throws ServletException {
+//		
+//		AnnotationConfigWebApplicationContext appContext = new AnnotationConfigWebApplicationContext();
+//		appContext.register(LoveCalAppConfig.class);
+//
+//		// create a Dispatcher servlet
+//		DispatcherServlet ds = new DispatcherServlet(appContext);
+//
+//		// register our dispatcher servlet with ServletContext obj
+//		// we have registered our dispatcher servlet with servletContext
+//		ServletRegistration.Dynamic mydispatcher = servletContext.addServlet("dispatcherServlet", ds);
+//
+//		mydispatcher.setLoadOnStartup(1);
+//		mydispatcher.addMapping("/*");
+//
+//	}
 
 }
