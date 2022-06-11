@@ -8,7 +8,7 @@
 </head>
 <body>
 	<h1 align="center">Love Calculator</h1>
-	<form action="process_data" request="get">
+	<form action="process_homepage">
 		<div align="center">
 			<p>
 				<label for="yn">Your Name:</label> <input type="text" id="yn"
@@ -18,10 +18,9 @@
 				<label for="cn">Crush Name:</label> <input type="text" id="cn"
 					name="crushname">
 			</p>
-			<input type="submit"
-				value="calculate">
+			<input type="submit" value="calculate">
 
-</div>
-</form>
+		</div>
+	</form>
 </body>
 </html>
